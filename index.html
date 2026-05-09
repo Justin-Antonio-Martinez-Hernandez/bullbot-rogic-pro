@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BullBot Rogic Pro</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <h1>BULLBOT ROGIC PRO</h1>
+
+    <div class="toolbox">
+      <button onclick="addBlock('dc_motor')">DC MOTOR</button>
+      <button onclick="addBlock('servo')">SERVO</button>
+      <button onclick="addBlock('dot_matrix')">DOT MATRIX</button>
+      <button onclick="addBlock('voice')">VOICE</button>
+      <button onclick="addBlock('if_else')">IF ELSE</button>
+      <button onclick="addBlock('loop')">LOOP</button>
+      <button onclick="addBlock('while')">WHILE</button>
+      <button onclick="addBlock('delay')">DELAY</button>
+      <button onclick="addBlock('break')">BREAK</button>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header>
+      <button onclick="runProgram()">RUN</button>
+      <button onclick="stopProgram()">STOP</button>
+    </header>
+
+    <div id="workspace"></div>
+
+    <div class="simulator">
+      <div id="robot"></div>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="blocks.js"></script>
+<script src="renderer.js"></script>
+<script src="executor.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
